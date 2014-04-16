@@ -6,8 +6,8 @@ require './database.rb'
 set :root, File.dirname(__FILE__)
 
 get '/' do
-  @title = 'index'
-  erb :hello
+  @title = 'Home'
+  erb :home
 end
 
 get '/about' do
