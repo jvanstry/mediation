@@ -25,3 +25,4 @@ APP_NAME = APP_ROOT.basename.to_s
 require APP_ROOT.join('config', 'database')
 
 Dir[APP_ROOT.join('helpers', '*.rb')].each { |file| require file }
+Dir[APP_ROOT.join('models', '*.rb')].each { |file| require file }

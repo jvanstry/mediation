@@ -1,0 +1,11 @@
+<div class="contact">
+  <form id="contactform" action="/contact" method="post">
+    <input type="text" name="contact[name]" placeholder="Name">  
+    <input type="text" name="contact[email]" placeholder="Email">
+    <input type="text" name="contact[phone]" placeholder="Phone">
+    <input type="radio" name="contact[preferred]" value="email">email<br>
+    <input type="radio" name="contact[preferred]" value="phone">phone<br>
+    <textarea name="contact[message]" form="contactform">Brief Description</textarea>
+    <input type="submit" value="Submit Request">
+  </form>  
+</div>

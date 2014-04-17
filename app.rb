@@ -1,6 +1,5 @@
 get '/' do
   @title = 'Home'
-  puts settings.gmail_pw
   erb :home
 end
 
@@ -14,26 +13,16 @@ get '/rates' do
 end
 
 get '/contact' do
-
+  erb :contact
 end
 
 post '/contact' do
-  puts params
+  contact = Contact.new params[:contact]
+  
+  contact.client_email_sent = contact.send_client_email settings.gmail_pw
+  contact.internal_email_sent = contact.send_internal_email settings.gmail_pw
 
-  # Pony.mail({
-  #   :to => 'jvanstry@gmail.com',
-  #   :subject => 'We have received your request',
-  #   :body => 'hello',
-  #   :via => :smtp,
-  #   :via_options => {
-  #     :address              => 'smtp.gmail.com',
-  #     :port                 => '587',
-  #     :enable_starttls_auto => true,
-  #     :user_name            => 'Mediation.WNY',
-  #     :password             => '33Burlington',
-  #     :authentication       => :plain, 
-  #     :domain               => 'localhost' 
-  #   }
-  # })
-
+  # contact.save
+  
+  erb :home
 end
