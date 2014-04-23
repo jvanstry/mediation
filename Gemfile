@@ -8,6 +8,7 @@ gem 'sinatra-contrib'
 gem 'mongo'
 gem 'bson_ext'
 gem 'rack-flash3'
+gem 'dotenv'
 
 group :development do
 	gem 'shotgun'

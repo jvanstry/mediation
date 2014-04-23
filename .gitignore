@@ -3,4 +3,4 @@
 .sass-cache/
 
 /log
-config.yaml
+env.rb
