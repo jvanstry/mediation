@@ -14,6 +14,8 @@ require 'pony'
 require 'sinatra'
 require "sinatra/reloader" if development?
 
+require 'newrelic_rpm' if production?
+
 require 'erb'
 
 require 'rack-flash'
