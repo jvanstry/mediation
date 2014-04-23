@@ -1,18 +1,13 @@
 get '/' do
-  @title = 'Home'
-  @gmail = ENV['gmail_password']
+  @title = 'home'
   erb :home
 end
 
 get '/about' do
-  @title = ENV['gmail_password']
   erb :about
 end
 
 get '/rates' do
-  puts ENV['PORT']
-  puts 'hi'
-  @title = ENV['gmail_password']
   erb :rates
 end
 
