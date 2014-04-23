@@ -8,28 +8,33 @@ body {
   float: left;
   width: 100%;
   min-height: 64px;
+  margin-top: 60px;
+  text-shadow: -2px -1px 5px rgba(0, 0, 0, .5);
   font-size: 1.5em;
   font-weight: 400;
-  line-height: 1.38;
-  color: rgb(0,0,0);
+  color: rgb(255, 255, 255);
 }
 
 .contact,
-.rates {
+.rates,
+.services {
   float: left;
   clear: both;
   width: 100%;
   min-height: 64px;
+  margin-top: 15px;
+  text-shadow: -2px -1px 5px rgba(0, 0, 0, .5);
   font-size: 1.5em;
   font-weight: 400;
   line-height: 1.38;
-  color: rgb(0,0,0);
+  color: rgb(255, 255, 255);
 }
 
-.container {
-  width: 21.4166666666%;
+.container .container {
+  position: absolute;
+  top: 179px;
+  width: 257px;
   height: 485px;
-  margin-top: 25px;
 }
 
 .fact {
@@ -42,66 +47,70 @@ body {
 }
 
 .facts {
+  float: left;
   clear: both;
   width: 100%;
   height: 256px;
 }
 
-.gerry {
-  float: left;
-}
-
 .gerry .name {
-  margin: 8px 0 0 20.233463035%;
+  width: 230px;
+  margin: 8px 0 0 -7px;
 }
 
 .name {
-  clear: both;
-  width: 71.9844357976%;
-  min-height: 41px;
-  font-weight: 400;
-  line-height: 1.38;
-  color: rgb(0,0,0);
-}
-
-.services {
   float: left;
   clear: both;
-  width: 100%;
-  min-height: 64px;
-  margin-top: 1px;
-  font-size: 1.5em;
+  min-height: 41px;
+  font-style: italic;
+  font-size: 0.875em;
   font-weight: 400;
   line-height: 1.38;
+  text-align: center;
   color: rgb(0,0,0);
 }
 
 .sidebar {
   float: left;
   clear: both;
-  width: 9.1666666666%;
-  height: 257px;
-  margin: 61px 0 0 13.25%;
-}
-
-.thomas {
-  float: left;
+  width: 128px;
+  height: 596px;
+  margin-left: 25px;
+  padding-left: 7px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: rgba(134, 114, 9, 0.41);
 }
 
 .thomas .name {
-  margin: 14px 0 0 11.6731517509%;
+  width: 210px;
+  margin: 11px 0 0 3px;
 }
 
 .title {
   float: left;
-  width: 47.4166666666%;
+  width: 843px;
   height: 83px;
   min-height: 83px;
-  margin: 124px 0 0 26%;
+  margin: 30px 0 0 25px;
+  padding-top: 18px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(33, 43, 93, 0.41);
+  text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
   font-size: 2.25em;
   line-height: 1.38;
   text-align: center;
-  color: rgb(0,0,0);
+  color: rgb(255, 255, 255);
+}
+
+._container {
+  position: relative;
+  float: left;
+  width: 73.8333333333%;
+  height: 737px;
+  margin: -10px 0 0 1.6666666666%;
 }
 
 .fact-2,
@@ -117,25 +126,29 @@ body {
 }
 
 .gerry-1 {
-  margin-left: 4.0833333333%;
+  left: 575px;
+  z-index: 6;
 }
 
 .gerry-2 {
   display: block;
+  float: left;
   width: 180px;
   height: auto;
-  margin-left: 20.233463035%;
+  margin-left: 17px;
   overflow: hidden;
 }
 
 .thomas-1 {
-  margin-left: 3.5833333333%;
+  left: 216px;
+  z-index: 13;
 }
 
 .thomas-2 {
   display: block;
+  float: left;
   width: 180px;
   height: auto;
-  margin-left: 13.6186770428%;
+  margin-left: 20px;
   overflow: hidden;
 }

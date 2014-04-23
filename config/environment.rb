@@ -16,7 +16,7 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
-require 'rack-flash3'
+require 'rack-flash'
 
 
 # Some helper constants for path-centric logic
