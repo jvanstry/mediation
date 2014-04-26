@@ -1,0 +1,136 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font: 400 1.25em/4 Merriweather;
+  color: rgb(255, 255, 255);
+}
+
+.bio {
+  float: left;
+  width: 100%;
+  min-height: 64px;
+  margin-top: 60px;
+  text-shadow: -2px -1px 5px rgba(0, 0, 0, .5);
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+}
+
+.contact,
+.rates,
+.services {
+  float: left;
+  clear: both;
+  width: 100%;
+  min-height: 64px;
+  margin-top: 15px;
+  text-shadow: -2px -1px 5px rgba(0, 0, 0, .5);
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  position: absolute;
+  top: -30px;
+  left: 14px;
+  z-index: 19;
+  width: 73.8333333333%;
+  height: 737px;
+}
+
+.sidebar {
+  float: left;
+  clear: both;
+  width: 128px;
+  height: 596px;
+  margin-left: 25px;
+  padding-left: 7px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: rgba(134, 114, 9, 0.41);
+}
+
+.title {
+  float: left;
+  width: 843px;
+  height: 83px;
+  min-height: 83px;
+  margin: 30px 0 0 25px;
+  padding-top: 18px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(33, 43, 93, 0.41);
+  text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.8em;
+  line-height: 1.8;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.page-title {
+  position: absolute;
+  width: 450px;
+  height: 98px;
+  min-height: 41px;
+  padding-top: 3px;
+  background-color: rgba(255, 255, 255, 0.62);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  font-size: 1.75em;
+  font-weight: 400;
+  line-height: 3.5;
+  text-align: center;
+  text-decoration: underline;
+  color: rgba(33, 43, 93, 0.79);
+  top: -125px;
+
+}
+
+.contact-container{
+  position: absolute;
+  top: 230px;
+  left: 225px;
+  width: 450px;
+  height: 600px;
+}
+
+form{
+  position: absolute;
+  left: 60px;
+  color: black;
+  font-size: 12px;
+}
+
+.form-name, .form-email, .form-phone, .form-message, .button{
+ background-color: #FFFFFF;
+ border: 2px solid #DDDDDD;
+ border-radius: 5px 5px 5px 5px;
+ color: #9E9E9E;
+ height: 30px;
+ width: 330px;
+ padding:0px 10px 0px 0px;
+ padding-left:10px;
+ margin:15px 0px 0px 0px;
+}
+
+.radio-group{
+  position: relative;
+}
+
+.radio{
+  position: absolute;
+  top: 44px;
+  height: 20px;
+  width: 20px;
+}
+
+.phone{
+  left: 175px;
+}
+
+.form-message {
+  width: 450px;
+  height: 120px;
+}

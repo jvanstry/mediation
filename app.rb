@@ -14,6 +14,7 @@ get '/rates' do
 end
 
 get '/contact' do
+  @title = 'contact'
   erb :contact
 end
 
