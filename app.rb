@@ -4,15 +4,22 @@ get '/' do
 end
 
 get '/about' do
+  @title = 'about'
   erb :about
 end
 
 get '/rates' do
+  @title = 'rates'
   erb :rates
 end
 
 get '/contact' do
   erb :contact
+end
+
+get '/services' do
+  @title = 'services'
+  erb :services
 end
 
 post '/contact' do
