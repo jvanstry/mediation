@@ -121,7 +121,7 @@ form{
 
 .radio{
   position: absolute;
-  top: 44px;
+  top: 39px;
   height: 20px;
   width: 20px;
 }
@@ -133,4 +133,23 @@ form{
 .form-message {
   width: 450px;
   height: 120px;
+}
+
+.preferred{
+  margin-top: 0;
+}
+
+.phone-label, .email-label{
+  position: absolute;
+  color: black;
+  font-size: 12px;
+  top: 190px;
+}
+
+.phone-label{
+  left: 260px;
+}
+
+.email-label{
+  left: 86px;
 }
