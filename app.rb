@@ -29,7 +29,9 @@ post '/contact' do
   contact.client_email_sent = contact.send_client_email ENV['gmail_password']
   contact.internal_email_sent = contact.send_internal_email ENV['gmail_password']
 
-  # contact.save
+  # TODO contact.save
+  # TODO flash -> Thanks for the submission
+  # TODO validations
   
-  erb :home
+  redirect '/'
 end

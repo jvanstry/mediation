@@ -424,6 +424,24 @@ th {
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+  color: rgba(33, 43, 93, 0.41);
+}
+
+.title-link:hover{
+  color: white;
+}
+
+.active{
+  color: rgba(33, 43, 93, 0.79);
+  text-decoration: underline;
+}
+
 .fluid-span-1 {
   width: 6.5%;
 }

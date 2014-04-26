@@ -1,14 +1,23 @@
 <div class="container _container clearfix">
-  <h1 class="title">VanStrydonck Mediation</h1>
+  <h1 class="title">
+    <a class="title-link" href="/">VanStrydonck Mediation</a>
+  </h1>
   <div class="sidebar clearfix">
-    <h3 class="bio nav-link">About Us</h3>
-    <h3 class="services nav-link">Services</h3>
-    <h3 class="rates nav-link">Rates</h3>
-    <h3 class="contact nav-link">Contact</h3>
-  </div>
+    <h3 class="bio nav-link">
+      <a class="about-link" href="/about">About Us</a>
+    </h3>
+    <h3 class="services nav-link">
+      <a class="services-link" href="/services">Services</a>
+    </h3>
+    <h3 class="rates nav-link">
+      <a class="rates-link" href="/rates">Rates</a>
+    </h3>
+    <h3 class="contact nav-link">
+      <a class="contact-link active" href="/contact">Contact</a>
+    </h3>
   <div class="contact-container">
     <h2 class="page-title">Contact Us</h2>
-    <form action="/contact" method="post">
+    <form id="contactform" action="/contact" method="post">
       <input class="form-name" type="text" name="contact[name]" placeholder="Name">  
       <input class="form-email" type="email" name="contact[email]" placeholder="Email">
       <input class="form-phone" type="text" name="contact[phone]" placeholder="Phone">
@@ -17,8 +26,8 @@
         <input class="radio email" type="radio" name="contact[preferred]" value="email">
         <input class="radio phone" type="radio" name="contact[preferred]" value="phone">
       </div>
-      <textarea class="form-message" name="contact[message]" form="contactform" placeholder="Reason for Contact"></textarea>
-      <input class="button" type="submit" value="Submit Request">
+      <textarea class="form-message" name="contact[message]" form="contactform" placeholder="Brief Description of Situation"></textarea>
+      <input class="button" type="submit" value="Submit Message">
     </form>
     <div for="phone" class="phone-label">Phone</div>
     <div for="email" class="email-label">Email</div>

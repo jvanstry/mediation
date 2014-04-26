@@ -139,6 +139,11 @@ form{
   margin-top: 0;
 }
 
+.button:hover{
+  background-color: #9E9E9E;
+  color: #FFFFFF;
+}
+
 .phone-label, .email-label{
   position: absolute;
   color: black;
