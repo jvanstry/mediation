@@ -32,6 +32,7 @@ post '/contact' do
   # TODO contact.save
   # TODO flash -> Thanks for the submission
   # TODO validations
+  # TODO spinner on email submit
   
   redirect '/'
 end

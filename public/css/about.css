@@ -111,7 +111,7 @@ body {
   padding-left: 7px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  background-color: rgba(134, 114, 9, 0.41);
+  background-color: #e3d734;
 }
 
 .sidebar .bio {
@@ -140,7 +140,7 @@ body {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: rgba(33, 43, 93, 0.41);
+  background-color: #375eb3;
   text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
   font-size: 3em;
   line-height: 1.8;
@@ -190,11 +190,13 @@ body {
   top: 127px;
   left: 421px;
   z-index: 9;
-  width: 460px;
+  width: 400px;
   height: 317px;
   font-size: 1em;
   line-height: 1.38;
   color: rgb(0,0,0);
+  text-align: justify;
+  overflow: hidden;
 }
 
 .factoid-1,
@@ -222,8 +224,10 @@ body {
 .uncle-gerry-3 {
   top: 474px;
   left: 421px;
-  width: 460px;
+  width: 400px;
   font-size: 1em;
   line-height: 1.38;
   color: rgb(0,0,0);
+  text-align: justify;
+  overflow: hidden;
 }
