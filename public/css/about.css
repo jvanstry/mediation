@@ -60,9 +60,10 @@ body {
   top: 446px;
   left: 275px;
   z-index: 8;
-  width: 535px;
+  width: 500px;
   height: 6px;
-  border-bottom: 3px dashed rgba(122, 136, 207, 0.41);
+  margin-top: 8.5px;
+  border-bottom: 3px dashed #2356C4;
   background-color: rgb(255, 255, 255);
 }
 
