@@ -29,7 +29,10 @@ post '/contact' do
   contact.client_email_sent = contact.send_client_email ENV['gmail_password']
   contact.internal_email_sent = contact.send_internal_email ENV['gmail_password']
 
-  # TODO contact.save
+  if !(contact.client_email_sent && contact.internal_email_sent)
+    contact.save
+  end
+  # TODO rake task to check for anything in email_error
   # TODO flash -> Thanks for the submission
   # TODO validations
   # TODO spinner on email submit

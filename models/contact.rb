@@ -50,7 +50,15 @@ class Contact
     false
   end
 
+  def save
+    File.write('email_error.rb', self.to_s, File.size('email_error.rb'), mode: 'a')
+  end
 
+  def to_s
+    "{ name: #{name}, email: #{email}, phone: #{phone}, preferred: #{preferred}, " +
+    "message: #{message}, client_email_sent: #{client_email_sent}, " +
+    "internal_email_sent: #{internal_email_sent} }"
+  end
 
   private 
 
