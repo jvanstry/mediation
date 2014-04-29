@@ -430,7 +430,8 @@ a{
 }
 
 a:hover{
-  color: #375eb3;
+  color: rgba(55, 94, 179, 0.7);
+  text-shadow: -2px -1px 5px rgba(0, 0, 0, .5);
 }
 
 .title-link:hover{
@@ -440,6 +441,7 @@ a:hover{
 .active{
   color: #2356C4;
   text-decoration: underline;
+  text-shadow: -2px -1px 5px rgba(0, 0, 0, .5);
 }
 
 .fluid-span-1 {

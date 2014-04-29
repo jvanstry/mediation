@@ -21,7 +21,7 @@ body {
   width: 100%;
   min-height: 64px;
   margin-top: 15px;
-  text-shadow: -2px -1px 5px rgba(0, 0, 0, .5);
+  text-shadow: -2px -1px 5px rgba(0, 0, 0, 1);
   font-size: 2em;
   font-weight: 400;
   line-height: 1.38;
@@ -120,7 +120,7 @@ body {
   width: 100%;
   min-height: 64px;
   margin-top: 60px;
-  text-shadow: -2px -1px 5px rgba(0, 0, 0, .5);
+  text-shadow: -2px -1px 5px rgba(0, 0, 0, 1);
   font-size: 2em;
   color: rgb(255, 255, 255);
 }
@@ -141,7 +141,7 @@ body {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: #375eb3;
+  background-color: rgba(55, 94, 179, 0.7);
   text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
   font-size: 3em;
   line-height: 1.8;
