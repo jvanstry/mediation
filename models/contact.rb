@@ -1,5 +1,6 @@
 class Contact
-  attr_accessor :client_email_sent, :internal_email_sent
+  attr_accessor :client_email_sent, :internal_email_sent, 
+    :second_try, :third_try
   attr_reader :name, :email, :phone, :preferred, :message
 
   def initialize opts = {}
@@ -9,13 +10,29 @@ class Contact
   end
 
   def save
-    File.write('../email_error.rb', self.to_s + "\n", File.size('../email_error.rb'), mode: 'a')
+    if third_try
+      save_to_error_land
+    elsif File.exists?('email_error.rb')
+      File.write('email_error.rb', self.to_s + "\n", mode: 'w+')
+    else
+      File.write('email_error2.rb', self.to_s + "\n", mode: 'w+')
+    end
+  end
+
+  def save_to_error_land
+    File.write('error_land.rb', self.to_s + "\n", mode: 'w+')
   end
 
   def to_s
-    "{:name=>#{name}, :email=>#{email}, :phone=>#{phone}, :preferred=>#{preferred}, " +
-    ":message=>#{message}, :client_email_sent=> #{client_email_sent}, " +
-    ":internal_email_sent=> #{internal_email_sent}}"
+    stringified = "{:name=>#{name}, :email=>#{email}, :phone=>#{phone}, :preferred=>" +
+    "#{preferred}, :message=>#{message}, :client_email_sent=> #{client_email_sent}, " +
+    ":internal_email_sent=> #{internal_email_sent}, :second_try=> true"
+    
+    if second_try == true
+      stringified += ", :third_try=> true}"
+    else 
+      stringified += "}"
+    end
   end
 
   def send_emails gmail_password
