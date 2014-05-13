@@ -8,6 +8,39 @@ class Contact
     @internal_email_sent = false
   end
 
+  def save
+    File.write('../email_error.rb', self.to_s + "\n", File.size('../email_error.rb'), mode: 'a')
+  end
+
+  def to_s
+    "{:name=>#{name}, :email=>#{email}, :phone=>#{phone}, :preferred=>#{preferred}, " +
+    ":message=>#{message}, :client_email_sent=> #{client_email_sent}, " +
+    ":internal_email_sent=> #{internal_email_sent}}"
+  end
+
+  def send_emails gmail_password
+    client_email_sent = send_client_email gmail_password
+    internal_email_sent = send_internal_email gmail_password
+
+    if !(client_email_sent && internal_email_sent)
+      save
+    end
+  end
+
+  private 
+
+  def personalized_body
+    "Hello #{name},\n\n" + 
+    "Thanks for reaching out to VanStrydonck Mediation." + 
+    " We have received your request for a consultation and will " +
+    "be in touch shortly.\n\nBest,\nVanStrydonck Mediation"
+  end
+
+  def contact_request
+    "Name: #{name}\nEmail: #{email}\nPhone: #{phone}\n" +
+    "Preferred Contact Method: #{preferred}\nMessage: #{message.chomp.chomp}"
+  end
+
   def send_client_email email_password
     Pony.mail({
       :to => @email,
@@ -48,29 +81,5 @@ class Contact
     true
   rescue
     false
-  end
-
-  def save
-    File.write('email_error.rb', self.to_s, File.size('email_error.rb'), mode: 'a')
-  end
-
-  def to_s
-    "{ name: #{name}, email: #{email}, phone: #{phone}, preferred: #{preferred}, " +
-    "message: #{message}, client_email_sent: #{client_email_sent}, " +
-    "internal_email_sent: #{internal_email_sent} }"
-  end
-
-  private 
-
-  def personalized_body
-    "Hello #{name},\n\n" + 
-    "Thanks for reaching out to VanStrydonck Mediation." + 
-    " We have received your request for a consultation and will " +
-    "be in touch shortly.\n\nBest,\nVanStrydonck Mediation"
-  end
-
-  def contact_request
-    "Name: #{name}\nEmail: #{email}\nPhone: #{phone}\n" +
-    "Preferred Contact Method: #{preferred}\nMessage: #{message.chomp.chomp}"
   end
 end
